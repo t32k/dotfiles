@@ -1,4 +1,4 @@
-export PATH="$PATH":/usr/local/bin:/usr/local/sbin
+export PATH=/usr/local/bin:/usr/local/sbin:"$PATH"
 
 # Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases and ~/.functions
 for file in ~/.{bash_prompt,exports,aliases,functions}; do
