@@ -1,0 +1,46 @@
+[alias]
+  c = commit -m 
+  co = checkout
+	up = pull
+	p = push
+	s = status -s
+	df = diff --color --color-words --abbrev
+        lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+        po = log --all --no-merges --since=yesterday --author="`git config --local  user.name`" --pretty=format:' + %s' | cat
+[color]
+	ui = true
+[apply]
+	whitespace = fix
+[core]
+	excludesfile = ~/.gitignore
+	attributesfile = ~/.gitattributes
+	whitespace = fix,space-before-tab,tab-in-indent,trailing-space
+	mergeoptions = --no-ff
+	precomposeunicode = true
+	quotepath = false
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[merge]
+	log = true
+[user]
+	name = t32k
+	email = ijok.ijok@gmail.com
+[mergetool]
+	keepBackup = false
+[push]
+	default = simple
+[pull]
+	rebase = false
+[commit]
+	cleanup = whitespace
