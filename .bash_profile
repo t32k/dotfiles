@@ -7,6 +7,8 @@ done
 unset file
 
 # Init Ruby Version Maneger
-source ~/.rvm/scripts/rvm
+eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/shims:$PATH"
+
 # Init Node Version Maneger
 source ~/.nvm/nvm.sh
