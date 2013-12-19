@@ -1,12 +1,16 @@
 "Display line number
 set number
+set wrap
+set tabstop=8
+set softtabstop=4
+set shiftwidth=4
+set expandtab
 
 " Set syntax highlighting options.
 set t_Co=256
 set background=dark
 syntax on
 colorscheme molokai
-
 set nocompatible              " be iMproved
 filetype off                  " required!
 
@@ -14,7 +18,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 
 " My bundles here:
@@ -30,6 +34,7 @@ Bundle 'FuzzyFinder'
 "emmet for vim
 Bundle 'mattn/emmet-vim'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'klen/python-mode'
 
 filetype plugin indent on     " required!
 "

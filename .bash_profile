@@ -6,9 +6,14 @@ for file in ~/.{bash_prompt,aliases,functions}; do
 done
 unset file
 
-# Init Ruby Version Maneger
-eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/shims:$PATH"
-
 # Init Node Version Maneger
 source ~/.nvm/nvm.sh
+
+# Init Ruby Version Maneger
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+# Init Python Version Maneger
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
