@@ -3,16 +3,26 @@ function md() {
 	mkdir -p "$@" && cd "$@"
 }
 
+# Git clone and enter it
+function gd() {
+  url=$1;
+  reponame=$(echo $url | awk -F/ '{print $NF}' | sed -e 's/.git$//');
+  git clone $url $reponame;
+  cd $reponame;
+}
+
+
 # find shorthand
 function f() {
-    find . -name "$1"
+  find . -name "$1"
 }
+
 
 # lets toss an image onto my server and pbcopy that bitch.
 function scpp() {
-    scp "$1" aurgasm@aurgasm.us:~/paulirish.com/i;
-    echo "http://paulirish.com/i/$1" | pbcopy;
-    echo "Copied to clipboard: http://paulirish.com/i/$1"
+  scp "$1" aurgasm@aurgasm.us:~/paulirish.com/i;
+  echo "http://paulirish.com/i/$1" | pbcopy;
+  echo "Copied to clipboard: http://paulirish.com/i/$1"
 }
 
 # Start an HTTP server from a directory, optionally specifying the port
@@ -37,10 +47,12 @@ AWK
   )" | less -F
 }
 
+
 # Copy w/ progress
 cp_p () {
   rsync -WavP --human-readable --progress $1 $2
 }
+
 
 # Test if HTTP compression (RFC 2616 + SDCH) is enabled for a given URL.
 # Send a fake UA string for sites that sniff it instead of using the Accept-Encoding header. (Looking at you, ajax.googleapis.com!)
