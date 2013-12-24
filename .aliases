@@ -6,6 +6,13 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
+# Shortcuts
+alias d="cd ~/Desktop"
+alias p="cd ~/projects"
+alias g="git"
+alias git="hub"
+alias v="vim"
+
 # programs
 alias slt='open -a "Sublime Text 2"'
 # also/or do this:
@@ -79,11 +86,6 @@ alias trimcopy="tr -d '\n' | pbcopy"
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
-
-# Shortcuts
-alias g="git"
-alias git="hub"
-alias v="vim"
 
 # File size
 alias fs="stat -f \"%z bytes\""
