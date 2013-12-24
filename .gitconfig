@@ -1,6 +1,6 @@
 [alias]
-  c = commit -m 
-  co = checkout
+	c = commit -m 
+	co = checkout
 	up = pull
 	p = push
 	s = status -s
