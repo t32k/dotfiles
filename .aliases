@@ -11,6 +11,7 @@ alias p="cd ~/Projects"
 alias git="hub"
 alias g="git"
 alias v="vim"
+alias stat="stylestats"
 
 # programs
 alias slt='open -a "Sublime Text 2"'
