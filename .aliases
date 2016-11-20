@@ -14,7 +14,7 @@ alias v="vim"
 alias stat="stylestats"
 
 # programs
-alias slt='open -a "Sublime Text 2"'
+alias slt='open -a "Sublime Text"'
 alias vsc='open -a "Visual Studio Code"'
 
 # be nice
