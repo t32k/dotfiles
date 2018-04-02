@@ -9,11 +9,9 @@ unset file
 # Init Node Version Maneger
 source ~/.nvm/nvm.sh
 
-# Init Ruby Version Maneger
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
 # Init Python Version Maneger
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
